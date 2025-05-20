@@ -1,0 +1,35 @@
+rules:
+  - resource: /users
+    allowed_methods:
+      - GET
+    roles:
+      - admin
+      - viewer
+  - resource: /users
+    allowed_methods:
+      - POST
+      - PUT
+      - DELETE
+    roles:
+      - admin
+  - resource: /products
+    allowed_methods:
+      - GET
+      - POST
+    roles:
+      - admin
+      - editor
+  - resource: /orders
+    allowed_methods:
+      - GET
+    roles:
+      - admin
+      - viewer
+      - customer
+  - resource: /orders/{id}
+    allowed_methods:
+      - GET
+      - PUT
+    roles:
+      - admin
+      - customer
