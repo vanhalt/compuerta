@@ -1,3 +1,5 @@
+// Package main is the entry point for the authorization microservice.
+// It initializes and starts the HTTP server.
 package main
 
 import (
@@ -7,6 +9,12 @@ import (
 	"vanhalt.com/authservice"
 )
 
+// main is the primary function for the authorization service.
+// It performs the following steps:
+// 1. Loads authorization rules from "rules.yaml".
+// 2. Creates a new HTTP router using the authservice package.
+// 3. Starts an HTTP server on port 8080.
+// If any step fails, it logs a fatal error and exits.
 func main() {
 	err := authservice.LoadRules("rules.yaml")
 	if err != nil {

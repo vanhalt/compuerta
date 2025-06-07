@@ -1,0 +1,6 @@
+.git
+.vscode
+.idx
+tmp/
+*.log
+authservice_app # Ignore locally built binary if any
